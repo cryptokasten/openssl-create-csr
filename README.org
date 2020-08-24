@@ -1,0 +1,21 @@
+#+TITLE: OpenSSL: Create CSR
+#+PROPERTY: header-args:sh :session *shell openssl-create-csr sh* :results silent raw
+#+OPTIONS: ^:nil
+
+** System environment
+
+- Debian 9.11
+
+- OpenSSL 1.0.2u
+
+** Generate RSA Key
+
+[[https://github.com/cryptokasten/openssl-rsa-key-generation][OpenSSL: Generate RSA key]]
+
+** Create CSR
+
+Interactive mode
+
+#+BEGIN_SRC sh
+openssl req -key keys/private.pem -new -out keys/domain.csr
+#+END_SRC
